@@ -1,24 +1,38 @@
 {
-  "name": "server",
+  "name": "smartfire-noc-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend server for SmartFire NOC Management System",
   "license": "ISC",
-  "author": "",
+  "author": "SmartFire Team",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^18.0.3",
     "express": "^5.2.1",
-    "mongoose": "^9.10.2"
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.10.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/morgan": "^1.9.9",
     "@types/node": "^26.6.2",
+    "@typescript-eslint/eslint-plugin": "^8.71.0",
+    "@typescript-eslint/parser": "^8.71.0",
+    "eslint": "^8.56.0",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }
